@@ -123,17 +123,26 @@ void main(int argc, char *argv[]) // argc is # of strings following command, arg
     // Call DisplayFatalErr() if this fails.  (Lots can go wrong here, see slides.)
 	if ((bytesRead = recv(sock, rcvBuf, RCVBUFSIZ - 1, 0)) <= 0) {
 		DisplayFatalErr("message recieved bad");
-	}
-	
+	}	
+	else {
+		if (bytesRead >= RCVBUFSIZ - 1) {
+			while ((bytesRead >= RCVBUFSIZ - 1 && bytesRead > 0)) {
+				for (i; i < bytesRead; i++) {
+					printf("%c", rcvBuf[i]);
 
-	// Display ALL of the received message, in printable C string format.
-    printf("Received from server: ");
+				}
+				bytesRead = recv(sock, rcvBuf, RCVBUFSIZ - 1, 0);
+				i = 0;
+			}
+		}
+	}
 	for (i; i < bytesRead; i++) {
 		printf("%c", rcvBuf[i]);
-		
+
 	}
 
 	printf("\n");
+
     printf("Ready to close the connection.  Press any key to continue...");
     getchar();
 

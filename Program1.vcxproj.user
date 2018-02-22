@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommandArguments>0:0:0:0:0:ffff:ac10:10 5000 "testing"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>0:0:0:0:0:ffff:ac10:10 5000 "testing this program suck major ball sacks and is so flippin dumb and I do not like it at all jfkdlkfjdfljdkf jfkdfjkdljfkjdf dfjdlfjdjflkjdjf dfjdlkjfjdlkjf djfkldjfjd jfdkjfdjkf jdl yo homie"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>
